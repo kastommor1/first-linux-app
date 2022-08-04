@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
-import './App.css';
+// import './App.css';
 
 class SomeText2 extends React.Component{
   render(){
-    return()
+    return(
+    <div>
+      <h4>Some text 2</h4>
+      <p>My lastname {this.props.lastname}</p>
+
+
+
+    </div>
+    )
   }
 }
 
@@ -11,7 +19,7 @@ function SomeText (props){
 
   return (
     <div>
-      <p>Some text1</p>
+      <h4>Some text1</h4>
       <p>My name is {props.name}</p>
       <hr />
     </div>
@@ -24,9 +32,7 @@ class App extends Component {
       <div className="App">
         <h2>Hello world</h2>
         <SomeText name="Serhii" />
-
-        
-        
+        <SomeText2 lastname="Shchur" />    
       </div>
     );
   }
